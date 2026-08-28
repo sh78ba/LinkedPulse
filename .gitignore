@@ -1,0 +1,36 @@
+# Root Environment & Secrets
+.env
+.env.*
+*.env
+backend/.env
+frontend/.env
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+backend/venv/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+dist-ssr/
+*.local
+.npm/
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
