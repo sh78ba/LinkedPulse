@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Layers } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 
 export default function Header() {
   const [isOnline, setIsOnline] = useState(true);
@@ -7,12 +8,13 @@ export default function Header() {
   useEffect(() => {
     const checkStatus = async () => {
       try {
-        const res = await fetch('/health');
+        const res = await fetch(`${API_BASE_URL}/health`);
         setIsOnline(res.ok);
       } catch {
         setIsOnline(false);
       }
     };
+
     checkStatus();
     const interval = setInterval(checkStatus, 30000);
     return () => clearInterval(interval);

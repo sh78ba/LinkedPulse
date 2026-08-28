@@ -11,6 +11,8 @@ import LanguagesView from './components/LanguagesView';
 import JsonViewer from './components/JsonViewer';
 import ErrorBanner from './components/ErrorBanner';
 
+import { API_BASE_URL } from './config';
+
 export default function App() {
   const [url, setUrl] = useState('');
   const [profileData, setProfileData] = useState(null);
@@ -22,11 +24,12 @@ export default function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/v1/profile', {
+      const res = await fetch(`${API_BASE_URL}/api/v1/profile`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url: targetUrl }),
       });
+
 
       const data = await res.json();
       if (!res.ok || data.detail) {
