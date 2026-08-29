@@ -206,8 +206,6 @@ The frontend dashboard will be running at:
    - **`li_at`**: Paste into `LINKEDIN_SESSION_COOKIE`.
    - **`JSESSIONID`**: (e.g. `"ajax:1234567890123456789"`). Paste into `LINKEDIN_CSRF_TOKEN`.
 
-> **Note**: Never commit `.env` or cookie secrets to version control. The `.gitignore` file is preconfigured to prevent credentials from being tracked.
-
 ---
 
 ## API Reference & Response Schema

@@ -1,7 +1,11 @@
 # Environment & Secrets
 .env
-.env.local
+.env.*
+*.env
 *.pem
+
+# Allow .env.example for reference
+!.env.example
 
 # Python
 __pycache__/
