@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Layers } from 'lucide-react';
+import { Activity } from 'lucide-react';
 import { API_BASE_URL } from '../config';
 
 export default function Header() {
@@ -33,12 +33,13 @@ export default function Header() {
           justifyContent: 'center',
           color: '#ffffff'
         }}>
-          <Layers size={18} />
+          <Activity size={18} />
         </div>
-        <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-main)', letterSpacing: '-0.02em' }}>
-          Profile Explorer
+        <span style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-main)', letterSpacing: '-0.02em' }}>
+          Linked<span style={{ color: 'var(--primary)' }}>Pulse</span>
         </span>
       </div>
+
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: 'var(--text-muted)' }}>
         <span style={{
